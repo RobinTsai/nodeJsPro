@@ -76,7 +76,15 @@ MongoClient.connect(url, function(err, db) {
   //   db.close();
   // });
 
-  findDocs(db, function() {
+  // findDocs(db, function() {
+  //   db.close();
+  // })
+
+  var adminDb = db.admin();
+  adminDb.listDatabases(function(err, dbs) {
+    assert.equal(null, err);
+    assert.ok(dbs.databases.length > 0);
+    console.log(JSON.stringify(dbs))
     db.close();
   })
 });
