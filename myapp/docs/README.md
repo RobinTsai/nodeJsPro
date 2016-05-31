@@ -12,6 +12,7 @@
 - 进入项目myapp后安装依赖包: `npm install`
 - 最后用`DEBUG=myapp npm start`启动这个应用
 - 在浏览器中用 `DEBUG=myapp npm start` 访问这个应用.(注意Express3.X版本用的是node app.js)
+- Use url: 127.0.0.1:3000
 
 ### npm
 
@@ -51,3 +52,18 @@
 
 - 再次执行 `grunt`，将提示你安装依赖,安装完即可
 - 创建两个目录src和build
+
+### bower
+
+- Bower是twitter推出的一款包管理工具，基于nodejs的模块化思想，把功能分散到各个模块中，让模块和模块之间存在联系，通过Bower来管理模块间的这种联系
+- 全局安装bower`npm install bower -g`
+- 用bower安装jquery: `bower install jquery`
+- 用`bower list`查看
+- 另外，安装`bootstrap`, `d3`
+- 写自己的bower库,参见[bower](http://blog.fens.me/nodejs-bower-intro/)
+
+### route
+
+- See this git-commit's codes. And click [there](http://www.expressjs.com.cn/guide/routing.html) for more.
+- 1. Use Router module
+- 2. Not use this.
