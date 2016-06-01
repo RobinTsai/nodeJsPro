@@ -67,3 +67,9 @@
 - See this git-commit's codes. And click [there](http://www.expressjs.com.cn/guide/routing.html) for more.
 - 1. Use Router module
 - 2. Not use this.
+
+### static file
+
+- 通过 Express 内置的 express.static 可以方便地托管静态文件
+- 可查看本次commit提交的code
+- 通过'http://127.0.0.1:3000/README.md', 'http://127.0.0.1:3000/images/prettyGirl.png', 'http://127.0.0.1:3000/static/README.md' 进行访问
