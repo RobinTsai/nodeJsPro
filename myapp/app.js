@@ -28,9 +28,19 @@ app.use('/static', express.static('docs'));
 app.use('/', routes);   // this use module Router
 app.use('/users', users); // this use module Router
 
-app.get('/test', function (req, res) {  // this is a test not use module Router
+// this is a test not use module Router
+app.get('/test', function (req, res) {
   res.send('hello world');
 });
+
+// use a chain style callable route: app.route().METHOD().METHOD();
+app.route('/test2')
+  .get(function(req, res) {
+    res.send('This is a test 2.');
+  })
+  .post(function(req, res) {
+    res.send('Using POST method visit');
+  });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
